@@ -1,0 +1,68 @@
+<!-- 
+Create a student registration form using HTML only that collects
+user information such as full name, email, password, age, gender,
+course and acceptance of terms and conditions. Use appropriate
+form elements including text fields, radio buttons, dropdown lists
+and checkboxes. Apply basic HTML validation using attributes
+such as required, min, max and pattern. As a challenge, prevent
+the form from being submitted if the user’s age is less than 16 and
+display an alert message saying “Registration Successful” when
+the form is submitted successfully. 
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student registration</h1>
+    <hr>
+    <br>
+    <form action="#" method="post" onsubmit="alert('Registration Successful')">
+
+        <label for="name">full Name:</label>
+        <input type="text" id="name" name="name" pattern="[a-zA-Z]{3,30}"
+            title="Please enter a valid name (3-30 letters only)">
+        <br>
+        <br>
+        <label for="email">email:</label>
+        <input type="email" id="email" name="email" required />
+        <br><br>
+        <label for="password">password:</label>
+        <input type="password" id="password" name="password" required />
+        <br><br>
+        <label for="age">age:</label>
+        <input type="number" id="age" name="age" min="16" max="100" required />
+        <br><br>
+        <label>gender:</label>
+        <input type="radio" name="gender" id="male" value="male" required>
+        <label for="male">male</label>
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">female</label>
+        <input type="radio" name="gender" id="other" value="other">
+        <label for="other">other </label>
+        <br><br>
+        <label for="course">courses</label>
+        <select name="course" id="course">
+            <option value="Machine Learning">Machine learning</option>
+            <option value="Deep Learning">Deep learning</option>
+            <option value="Data science">Data science</option>
+        </select>
+        <br>
+        <br>
+        <input type="checkbox" id="agreement" name="agreement" required>
+        <label for="agreement">I agree all the term and conditions.</label>
+        <br><br>
+        <input type="submit" />
+
+
+    </form>
+</body>
+
+</html>
