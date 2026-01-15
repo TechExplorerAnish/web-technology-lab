@@ -1,0 +1,72 @@
+<!--
+Create a webpage using HTML only that demonstrates the use of
+different types of lists. Display an unordered list showing at least
+five favorite subjects or skills and an ordered list showing three
+daily activities or steps of a process. Also include a description list
+(<dl>) with at least two terms and their corresponding descriptions.
+Demonstrate list nesting by placing one list inside another and as a
+mini challenge, change the list style using the type attribute and
+create a mixed list where an unordered list is placed inside an
+ordered list.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul[type="circle"] {
+            color: orange;
+        }
+
+        ul[type="square"] {
+            color: blueviolet;
+        }
+
+        ol[type="A"] {
+            color:green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Lists Demonstration</h1>
+    <h2>Unordered List of Favorite Subjects</h2>
+    <ul type="circle">
+        <li>Mathematics</li>
+        <li>Computer Science
+            <ul type="square">
+                <li>Programming</li>
+                <li>Data Structures</li>
+            </ul>
+        </li>
+        <li>Physics</li>
+        <li>Chemistry</li>
+        <li>Biology</li>
+    </ul>
+
+    <h2>Ordered List of Daily Activities</h2>
+    <ol type="A">
+        <li>Wake up</li>
+        <li>Exercise</li>
+        <li>Have Breakfast
+            <ul type="circle">
+                <li>Prepare food</li>
+                <li>Eat</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Description List</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>A markup language for creating web pages.</dd>
+        <dt>CSS</dt>
+        <dd>A style sheet language used for describing the presentation of a document written in HTML.</dd>
+    </dl>
+</body>
+
+</html>
